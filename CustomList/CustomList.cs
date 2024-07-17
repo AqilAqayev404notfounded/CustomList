@@ -24,6 +24,7 @@ public class CustomList<T> : IEnumerable<T>
         if (predicate == null)
         {
             throw new ArgumentNullException();
+            Console.WriteLine();
         }
         for (int i = 0; i < ListCustom.Length; i++)
         {
@@ -55,6 +56,10 @@ public class CustomList<T> : IEnumerable<T>
     public void RemoveAll()
     {
         Array.Resize(ref ListCustom, 0);
+    }
+    public T[] FindAll(T item)
+    {
+        return Array.FindAll(ListCustom, a=> a.Equals(item));
     }
 
     public IEnumerator<T> GetEnumerator()
