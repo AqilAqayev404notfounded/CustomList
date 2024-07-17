@@ -24,7 +24,6 @@ public class CustomList<T> : IEnumerable<T>
         if (predicate == null)
         {
             throw new ArgumentNullException();
-            Console.WriteLine();
         }
         for (int i = 0; i < ListCustom.Length; i++)
         {
@@ -78,4 +77,6 @@ public class CustomList<T> : IEnumerable<T>
             yield return item;
         }
     }
+
+
 }
